@@ -13,10 +13,10 @@ function Layout() {
       </header>
       <div className="admin-content">
         <div className="sidebar">
-          <Link to="#">대시보드</Link>
-          <Link to="#">사용자</Link>
-          <Link to="#">설정</Link>
-          <Link to="#">잘못된 페이지</Link>
+          <Link to="/dashboard">대시보드</Link>
+          <Link to="/users">사용자</Link>
+          <Link to="/settings">설정</Link>
+          <Link to="/not-found">잘못된 페이지</Link>
         </div>
         <div className="main-content"></div>
       </div>
