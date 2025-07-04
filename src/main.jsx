@@ -12,15 +12,14 @@ import NotFound from './pages/admin/NotFound';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
-    errorElement: <NotFound />,
+    element: <Home />,
+  },
+  {
+    path: '/admin',
+    element: <Layout />,
     children: [
       {
         index: true,
-        element: <Home />,
-      },
-      {
-        path: 'dashboard',
         element: <Dashboard />,
       },
       {
@@ -28,11 +27,15 @@ const router = createBrowserRouter([
         element: <Users />,
       },
       {
+        path: 'users/:id',
+        element: <UserDetail />,
+      },
+      {
         path: 'settings',
         element: <Settings />,
       },
       {
-        path: 'not-found',
+        path: '*',
         element: <NotFound />,
       },
     ],
